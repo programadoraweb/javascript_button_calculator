@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<!-- language -->
+<html lang="en">
+  <head>
+    <!-- character encoding - typo de characteres utilizados-->
+    <meta charset="UTF-8" />
+    <!-- viewport = tamano de la pantalla / responsive  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- author -->
+    <meta name="author" content="Ingrid Inara" />
+    <!-- description - es lo que sale en google cuando buscas tu web:-->
+    <meta name="description" content=" Ex. JS APP by Ingrid Inara" />
+    <!-- keywords -->
+    <meta name="keywords" content="JS APP" />
+    <!-- robots - para que los robots nos indexen -->
+    <meta name="robots" content="index,follow">
+    <!-- <meta name="robots" content="index,unfollow"> -->
+    <!-- RESET CSS -->
+   <!--  <link rel="stylesheet" href="./reset.css" /> -->
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document Title</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- not responsible table only for code matters -->
+    <table width="10%" border="40px" >
+        <tr>
+          <td colspan="4" align="center" >
+          <input name="display" type="text" class="big_display" id="display" value="" ></td>
+          <!--  hace falta el "id" para chamar display na funcao onclick abaixo -->
+        </tr>
+        <tr>
+          <td width="25%"><input type="button" class="character"  value="+" onclick="display.value += '+' "></td>
+          <td width="25%"><input type="button" class="character"  value="-" onclick="display.value += '-' "></td>
+          <td width="25%"><input type="button" class="character" value="*" onclick="display.value += '*' "></td>
+          <td width="25%"><input type="button" class="character"  value="/" onclick="display.value += '/' "></td>
+        </tr>
+        <tr>
+          <td><input  type="button" class="character"  value="7" onclick="display.value += '7' "></td>
+          <!-- Hace falta +=, no funciona: onclick="display.value = '7' " -->
+          <td><input  type="button" class="character"  value="8" onclick="display.value += '8' "></td>
+          <td><input  type="button" class="character"  value="9" onclick="display.value += '9' "></td>
+          <td ><input  type="button" class="blank_character"  value=" &#128178;" ></td>
+        </tr>
+        <tr>
+          <td><input  type="button" class="character"  value="4" onclick="display.value += '4' "></td>
+          <td><input  type="button" class="character"  value="5" onclick="display.value += '5' "></td>
+          <td><input  type="button" class="character"  value="6" onclick="display.value += '6' "></td>
+          <td><input type="button" class="character" value="DE" onclick="display.value = display.value.toString().slice(0,-1)"></td>
+          <!-- To delete the last value we use the pre built methods  -->
+        </tr>
+        <tr>
+          <td><input  type="button" class="character"  value="1" onclick="display.value += '1' " ></td>
+          <td><input  type="button" class="character"  value="2" onclick="display.value += '2' "></td>
+          <td><input  type="button" class="character"  value="3" onclick="display.value += '3' "></td>
+          <td><input type = "button" class = "character" value ="AC" onclick="display.value = ' ' "></td> <!--The operator sign is =, (not +=) because you errase all numbers, you reestart. onclick="display.value = ' ' " -->
+        </tr>
+        <tr>
+          <td><input  type="button" class="character"  value="0" onclick="display.value = '0'"></td>
+          <td><input  type="button" class="character"  value="," onclick="display.value += ',' "></td>
+          <td colspan="2"><input type="button" class="equals"  value="=" onclick="display.value = eval(display.value)" ></td>
+          <!-- Eval is a pre built method that evaluates the string and does the operation. -->
+        </tr>
+      </table>
+    <footer>
+
+    </footer>
+    <!-- CUSTOM JS link - antes del cierre del body -->
+    <script src="./script.js"></script>
+  </body>
+</html>
