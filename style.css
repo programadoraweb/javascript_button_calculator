@@ -1,0 +1,44 @@
+table{
+    margin:auto;
+    padding: 20px;
+    border-color: lightcoral;
+    background-color: lightgrey;
+}
+  .character{
+      width:100px;
+      height:80px;
+      background-color: whitesmoke;
+  }
+  .character:hover{
+    font-size: 40px;
+    color: black;
+  }
+  .blank_character{
+      width:100px;
+      height:80px;
+      background-color: white;
+      font-size: 0px;
+  }
+  .blank_character:hover{
+    font-size: 50px;
+    background-color: lightcoral;
+  }
+  .equals{
+      width:208px;
+      height:80px;
+      font-size: 30px;
+  }
+  .big_display{
+      height:60px;
+      width:380px;
+      background-color: lightcoral;
+      border:medium #FFF;
+      color: white; 
+      font-size:40px;
+      text-align:right;
+      padding:20px;
+  }
+  .big_display:hover{
+      background-color: white;
+      color: black; 
+  }
